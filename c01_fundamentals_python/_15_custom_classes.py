@@ -35,7 +35,7 @@ class Animal(ABC):
     """
 
     @abstractmethod
-    def makeSound(self):
+    def make_sound(self):
         pass
 
 
@@ -46,7 +46,7 @@ class Dog(Animal):
     interfaz.
     """
 
-    def makeSound(self):
+    def make_sound(self):
         print('Barf barf!')
 
 
@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
     # example 2, create an animal dog
     uma = Dog()
-    uma.makeSound()
+    uma.make_sound()
 
     # example 3, create a car
     mustang: Car = Car('Ford', 'Mustang', 1987, 'Black')
