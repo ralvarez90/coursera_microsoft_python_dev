@@ -1,5 +1,5 @@
 """
-_30_binary_search.py
+ALGORITMO BÚSQUEDA BINARIA
 """
 from random import randint
 

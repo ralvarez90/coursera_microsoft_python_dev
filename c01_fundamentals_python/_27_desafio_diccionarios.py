@@ -1,5 +1,6 @@
 """
-_27_desafío_diccionarios.py
+RETO
+Uso de diccionarios.
 """
 
 

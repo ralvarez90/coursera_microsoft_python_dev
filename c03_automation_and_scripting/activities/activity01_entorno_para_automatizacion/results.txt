@@ -1,0 +1,13 @@
+ï: 1
+este: 1
+es: 1
+un: 2
+mensaje: 1
+de: 1
+prueba: 1
+se: 1
+mantiene: 1
+archivo: 1
+sin: 1
+caracteres: 1
+especiales: 1

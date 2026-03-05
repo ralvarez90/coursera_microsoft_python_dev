@@ -1,5 +1,8 @@
 """
-_28_desafío_listas_sets.py
+RETO
+
+Cree un arreglo de enteros con números duplicados y utilize el tipo de dato
+set para eliminar los elementos duplicados.
 """
 
 # List with some integers

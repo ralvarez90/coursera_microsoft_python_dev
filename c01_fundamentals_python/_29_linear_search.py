@@ -1,10 +1,9 @@
 """
-_29_linear_search.py
+ALGORITMO BÚSQUEDA LINEAL
 
 Algorítmo básico que revisa elemento por elemento. Es de fácil uso para colecciones
 pequeñas.
 """
-from random import randint
 
 
 def linear_search(data: list, target):
