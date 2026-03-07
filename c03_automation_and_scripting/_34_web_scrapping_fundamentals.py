@@ -33,4 +33,8 @@ repositorio de imágenes local o utilizarlas para análisis de imágenes.
 
 Puede usarse también para extraer todos los detalles de un determinado
 producto dentro de una tienda on-line.
+
+Se deben respetar siempre las condiciones de servicio del sitio web y
+además consultar el archivo robots.txt que proporciona pautas sobre qué
+partes del sitio deben borrarse.
 """
