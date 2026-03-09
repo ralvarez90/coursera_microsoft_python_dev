@@ -7,7 +7,7 @@ from typing import Any
 from bs4 import BeautifulSoup
 
 
-def get_product_info(html_txt: str) -> dict[str, Any] | None:
+def get_product_info(html_txt: str) -> dict[str, str] | None:
     soup = BeautifulSoup(html_txt, "html.parser")
     product = soup.find('div', class_='product')
 
