@@ -76,4 +76,3 @@ uso en tu programa Python.
 - Código de estado: Se trata de un código numérico que indica el resultado de la solicitud. Es como un resumen
 de lo ocurrido. Estos son algunos códigos de estado comunes que encontrarás
 """
-import requests

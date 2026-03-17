@@ -3,7 +3,7 @@ CÓDIGOS DE ESTADO
 
 Los códigos de estado son códigos numéricos de tres dígitos que indican el resultado de una solicitud de API.
 Proporcionan información valiosa a los clientes sobre el éxito o el fracaso de sus solicitudes, junto con
-información adicional sobre la naturaleza de la respuesta.  Veamos algunos códigos de estado comunes que puede
+información adicional sobre la naturaleza de la respuesta. Veamos algunos códigos de estado comunes que puede
 encontrar al trabajar con estos métodos HTTP.
 
 Una solicitud GET correcta suele devolver un código de estado 200 OK. Si el recurso no existe, obtendrá un
@@ -62,10 +62,18 @@ El papel de las API REST en el desarrollo moderno de software
 
 Las API REST han revolucionado la forma en que las aplicaciones de software interactúan e intercambian datos,
 fomentando un panorama de servicios interconectados y permitiendo la creación de aplicaciones web potentes y
-flexibles. Proporcionan un enfoque estandarizado y escalable para construir APIs, promoviendo la interoperabilidad
+flexibles. Proporcionan un enfoque estandarizado y escalable para construir API's, promoviendo la interoperabilidad
 y simplificando la integración de diversos sistemas. Como desarrollador de Python, dominar los conceptos de las
-APIs REST te capacita para aprovechar el vasto ecosistema de servicios web, construir aplicaciones robustas y
+API's REST te capacita para aprovechar el vasto ecosistema de servicios web, construir aplicaciones robustas y
 escalables, y contribuir al siempre cambiante mundo del desarrollo de software.
 
-Las API REST son un testimonio del poder de los protocolos de comunicación estandarizados en la era digital. Constituyen la columna vertebral del desarrollo web moderno, ya que permiten un intercambio de datos fluido y fomentan un entorno colaborativo de servicios interconectados. Al comprender los conceptos fundamentales de las API de REST, los desarrolladores de Python pueden desbloquear un mundo de posibilidades, creando aplicaciones escalables, robustas e interoperables que satisfagan las necesidades dinámicas del panorama digital. ASÍ como te embarcas en tu viaje para dominar el desarrollo en Python, recuerda que las APIs REST son tu puerta de entrada a un universo de servicios interconectados, permitiéndote crear soluciones innovadoras e impactantes que dan forma al futuro de la tecnología.
+Las API REST son un testimonio del poder de los protocolos de comunicación estandarizados en la era digital.
+Constituyen la columna vertebral del desarrollo web moderno, ya que permiten un intercambio de datos fluido
+y fomentan un entorno colaborativo de servicios interconectados. Al comprender los conceptos fundamentales de
+las API de REST, los desarrolladores de Python pueden desbloquear un mundo de posibilidades, creando aplicaciones
+escalables, robustas e interoperables que satisfagan las necesidades dinámicas del panorama digital.
+
+Así como te embarcas en tu viaje para dominar el desarrollo en Python, recuerda que las API's REST son tu puerta
+de entrada a un universo de servicios interconectados, permitiéndote crear soluciones innovadoras e impactantes
+que dan forma al futuro de la tecnología.
 """

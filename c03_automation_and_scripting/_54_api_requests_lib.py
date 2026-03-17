@@ -1,5 +1,5 @@
 """
-INTERACCIÓN DE APIs MEDIANTE LIBRERÍA REQUESTS.
+INTERACCIÓN DE API's MEDIANTE LIBRERÍA REQUESTS.
 
 1. requests
 Librería para realizar peticiones a API's, gestionar respuestas y

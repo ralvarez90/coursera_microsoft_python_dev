@@ -5,8 +5,8 @@ Las API REST, o Interfaces de programación de aplicaciones Representational Sta
 como piedra angular del desarrollo web moderno, permitiendo una comunicación fluida entre diversas
 aplicaciones de software. Sirven como puentes digitales que permiten a diferentes sistemas intercambiar
 datos y funcionalidades, fomentando un ecosistema colaborativo de servicios interconectados. ASÍ COMO un
-desarrollador de Python, obtener una comprensión profunda de las APIs REST es crucial para la construcción
-de aplicaciones web escalables y robustas. Exploraremos los conceptos fundamentales de las APIs REST,
+desarrollador de Python, obtener una comprensión profunda de las API's REST es crucial para la construcción
+de aplicaciones web escalables y robustas. Exploraremos los conceptos fundamentales de las API's REST,
 explorando su arquitectura, formatos de petición/respuesta, y el papel esencial que juegan en el desarrollo
 de software moderno.
 

@@ -31,7 +31,7 @@ incluso "la nada" (valores nulos). Esta versatilidad lo convierte en una ventani
 cualquier tipo de información.
 
 Navegador de red: Gracias a su naturaleza ligera y a su formato estructurado, JSON es perfecto para los datos
-que viajan a través de las redes. Garantiza que la información llegue a su destino intacta y lista para
+que viajan a través de las redes. Garantiza que la información llegue a su destino intacto y lista para
 ser utilizada.
 
 La combinación de simplicidad, universalidad y flexibilidad de JSON lo ha convertido en la opción preferida
@@ -122,6 +122,6 @@ user_data = {
     'hobbies': ['read', 'chess'],
 }
 
-# Convert to json string
+# Convert to JSON string
 json_string = json.dumps(user_data, indent=4)
 print(json_string)
