@@ -18,8 +18,8 @@ def main():
 
     # Itera sobre lista de Celsius y genera el equivalente en Fahrenheit,
     for celsius in celsius_temperatures:
-        _auxTemp = (celsius * 9 / 5) + 32
-        fahrenheit_temperatures.append(_auxTemp)
+        _aux_temp = (celsius * 9 / 5) + 32
+        fahrenheit_temperatures.append(_aux_temp)
 
     # Show results
     print(f'Celsius Temperatures    : {celsius_temperatures}')

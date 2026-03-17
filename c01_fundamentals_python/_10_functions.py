@@ -6,14 +6,14 @@ que es más fácil de mantener.
 """
 
 # Define a new number type.
-Number = int | float
+number = int | float
 
 
 def show_welcome_message():
     print('Welcome to Python Programming Language')
 
 
-def get_rectangle_area(length: Number, width: Number) -> Number:
+def get_rectangle_area(length: number, width: number) -> number:
     """
     Calcula el área de un rectángulo dado su largo y ancho. Retorna -1
     si se ingresan valores inválidos.

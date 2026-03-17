@@ -20,12 +20,12 @@ def count_vowels(text: str) -> int:
     if text in {'', None}:
         return 0
 
-    vowels_set = set('aeiouAEIOU')
-    vowels = 0
+    vowels = set('aeiouAEIOU')
+    totalVowels = 0
     for c in text:
-        if c in vowels_set:
-            vowels += 1
-    return vowels
+        if c in vowels:
+            totalVowels += 1
+    return totalVowels
 
 
 # Show factorial from some integer
