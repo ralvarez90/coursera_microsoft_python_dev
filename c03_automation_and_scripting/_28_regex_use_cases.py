@@ -19,8 +19,8 @@ público es una tarea valiosa. Las expresiones regulares pueden ayudar en este p
 identificando palabras clave o frases en los datos de texto que indiquen un sentimiento
 positivo o negativo. Al aplicar patrones regex a las publicaciones en redes sociales, a
 las reseñas de productos o a los comentarios de los clientes, se puede obtener una
-comprensión cuantitativa de la opinión pública, lo que ayuda en las estrategias de marketing,
-el desarrollo de productos y la gestión de la reputación de la marca.
+comprensión cuantitativa de la opinión pública, lo que ayuda en las estrategias de
+marketing, el desarrollo de productos y la gestión de la reputación de la marca.
 """
 import re
 
