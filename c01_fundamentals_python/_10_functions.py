@@ -9,11 +9,11 @@ que es más fácil de mantener.
 number = int | float
 
 
-def show_welcome_message():
+def showWelcomeMessage():
     print('Welcome to Python Programming Language')
 
 
-def get_rectangle_area(length: number, width: number) -> number:
+def getRectangleArea(length: number, width: number) -> number:
     """
     Calcula el área de un rectángulo dado su largo y ancho. Retorna -1
     si se ingresan valores inválidos.
@@ -26,11 +26,11 @@ def get_rectangle_area(length: number, width: number) -> number:
 
 
 if __name__ == '__main__':
-    show_welcome_message()
+    showWelcomeMessage()
 
     try:
-        print(get_rectangle_area(1, 2))
-        print(get_rectangle_area(1.6, 1_000.45))
-        print(get_rectangle_area(1, -2))
+        print(getRectangleArea(1, 2))
+        print(getRectangleArea(1.6, 1_000.45))
+        print(getRectangleArea(1, -2))
     except ValueError as e:
         print(e)

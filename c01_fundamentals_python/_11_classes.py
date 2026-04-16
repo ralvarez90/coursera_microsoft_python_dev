@@ -14,9 +14,9 @@ class SomeClassName:
     def __init__(self):
         self.msg = 'Message in SomeClassName instance'
 
-    def show_message(self):
+    def showMessage(self):
         print(self.msg)
 
 
 if __name__ == '__main__':
-    SomeClassName().show_message()
+    SomeClassName().showMessage()

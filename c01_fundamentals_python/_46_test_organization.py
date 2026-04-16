@@ -70,22 +70,22 @@ class CalculatorTest:
         """
         return Calculator()
 
-    def test_add(self, calculator: Calculator):
+    def testAdd(self, calculator: Calculator):
         result = calculator.add(2, 3)
         assert result == 5
 
-    def test_subtract(self, calculator: Calculator):
+    def testSubtract(self, calculator: Calculator):
         result = calculator.subtract(5, 2)
         assert result == 3
 
-    def test_multiply(self, calculator: Calculator):
+    def testMultiply(self, calculator: Calculator):
         result = calculator.multiply(4, 3)
         assert result == 12
 
-    def test_divide(self, calculator: Calculator):
+    def testDivide(self, calculator: Calculator):
         result = calculator.divide(10, 2)
         assert result == 5.0
 
-    def test_divide_by_zero(self, calculator: Calculator):
+    def testDivideByZero(self, calculator: Calculator):
         with pytest.raises(ValueError):
             calculator.divide(5, 0)

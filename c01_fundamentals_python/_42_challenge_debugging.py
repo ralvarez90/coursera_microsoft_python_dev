@@ -3,14 +3,14 @@ RETO: USANDO EL DEBUGGER
 """
 
 
-def calculate_discount(price: int | float, discount_percentage: int | float):
-    discount_amount = price * (discount_percentage / 100)
-    discounted_price: float = price - discount_amount
-    return discounted_price
+def calculateDiscount(price: int | float, discountPercentage: int | float):
+    discountAmount = price * (discountPercentage / 100)
+    discountedPrice: float = price - discountAmount
+    return discountedPrice
 
 
 if __name__ == '__main__':
-    test_price = 50
+    testPrice = 50
     discount = 20
-    final_price = calculate_discount(test_price, discount)
-    print(final_price)
+    finalPrice = calculateDiscount(testPrice, discount)
+    print(finalPrice)

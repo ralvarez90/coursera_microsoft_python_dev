@@ -24,7 +24,7 @@ class BankAccount:
         else:
             print('Error: Cannot deposit negative or 0 amount in account balance.')
 
-    def get_balance(self) -> float:
+    def getBalance(self) -> float:
         return self._balance
 
 
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     # example 1, create an account
     bbva_account = BankAccount(balance=10_000)
     bbva_account.deposit(123)
-    print(f'BBVA balance: ${bbva_account.get_balance():,.2f}')
+    print(f'BBVA balance: ${bbva_account.getBalance():,.2f}')
 
     # example 2, create an animal dog
     uma = Dog()

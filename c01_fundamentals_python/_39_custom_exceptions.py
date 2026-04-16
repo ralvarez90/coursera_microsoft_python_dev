@@ -14,11 +14,11 @@ class InvalidCredentialException(Exception):
     pass
 
 
-def validate_credentials(username: str, password: str):
+def validateCredentials(username: str, password: str):
     raise InvalidCredentialException('Incorrect username or password.')
 
 
-def read_file_contents(file_path: str) -> str | None:
+def readFileContents(file_path: str) -> str | None:
     try:
         with open(file_path, 'r') as file:
             return file.read()
@@ -28,8 +28,8 @@ def read_file_contents(file_path: str) -> str | None:
 
 # Run application
 try:
-    validate_credentials(username='peter', password='123@12')
-    read_file_contents(file_path='inexistente.txt')
+    validateCredentials(username='peter', password='123@12')
+    readFileContents(file_path='inexistente.txt')
 except InvalidCredentialException as e:
     print(e)
 except FileNotFoundError as e:

@@ -6,6 +6,7 @@ import pytest
 
 
 class Product:
+
     def __init__(self, name: str, price: float, quantity: int = 1):
         self.name = name
         self.price = price
@@ -16,50 +17,51 @@ class Product:
 
 
 class Cart:
+
     def __init__(self):
         self.items = []
 
-    def add_to_cart(self, product: Product):
+    def addToCart(self, product: Product):
         self.items.append(product)
 
-    def calculate_total_price(self, tax_rate: float = 0, shipping_fee: float = 0) -> int | float:
+    def calculateTotalPrice(self, taxRate: float = 0, shippingFee: float = 0) -> int | float:
         subtotal = sum(item.price * item.quantity for item in self.items)
-        tax = subtotal * tax_rate
-        return subtotal + tax + shipping_fee
+        tax = subtotal * taxRate
+        return subtotal + tax + shippingFee
 
-    def apply_discount(self, discount_percentage: float):
+    def applyDiscount(self, discountPercentage: float):
         for item in self.items:
-            item.price *= (1 - discount_percentage / 100)
+            item.price *= (1 - discountPercentage / 100)
 
-    def checkout(self, payment_gateway):
-        total_price = self.calculate_total_price()
+    def checkout(self, paymentGateway):
+        total_price = self.calculateTotalPrice()
         # ...
         return True
 
 
 class TestProductFunctions:
 
-    def test_add_to_cart_successful(self):
+    def testAddToCartSuccessful(self):
         cart = Cart()
         product = Product('Widget', 10)
-        cart.add_to_cart(product)
+        cart.addToCart(product)
         assert len(cart.items) == 1
         assert cart.items[0] == product
 
-    def test_calculate_total_price(self):
+    def testCalculateTotalPrice(self):
         cart = Cart()
-        cart.add_to_cart(Product('Widget A', 15.0))
-        cart.add_to_cart(Product("Widget N", 20.0, 2))
-        total = cart.calculate_total_price(tax_rate=0.07, shipping_fee=5.0)
-        expected_total = (15.0 + 20.0 * 2) * 1.07 + 5.0
-        assert total == expected_total
+        cart.addToCart(Product('Widget A', 15.0))
+        cart.addToCart(Product("Widget N", 20.0, 2))
+        total = cart.calculateTotalPrice(taxRate=0.07, shippingFee=5.0)
+        expectedTotal = (15.0 + 20.0 * 2) * 1.07 + 5.0
+        assert total == expectedTotal
 
-    def test_apply_discount_correctly(self):
+    def testApplyDiscountCorrectly(self):
         cart = Cart()
-        cart.add_to_cart(Product('Discounted Item', 50.0))
-        cart.apply_discount(20)
+        cart.addToCart(Product('Discounted Item', 50.0))
+        cart.applyDiscount(20)
         assert cart.items[0].price == 40
 
-    def test_checkout_successful_payment(self):
+    def testCheckoutSuccessfulPayment(self):
         cart = Cart()
-        assert cart.checkout(payment_gateway=None) is True
+        assert cart.checkout(paymentGateway=None) is True

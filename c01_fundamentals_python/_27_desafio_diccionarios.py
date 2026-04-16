@@ -11,7 +11,7 @@ class Product:
         self.price = price
         self.quantity = quantity
 
-    def to_dict(self) -> dict:
+    def toDict(self) -> dict:
         return {
             'name': self.name,
             'price': self.price,
@@ -20,15 +20,15 @@ class Product:
 
 
 products = {
-    'SKU123': Product('Widget A', 19.99, 50).to_dict(),
-    'SKU456': Product('Gadget B', 34.95, 25).to_dict(),
-    'SKU789': Product('Gizmo C', 9.99, 100_1000).to_dict(),
+    'SKU123': Product('Widget A', 19.99, 50).toDict(),
+    'SKU456': Product('Gadget B', 34.95, 25).toDict(),
+    'SKU789': Product('Gizmo C', 9.99, 100_1000).toDict(),
 }
 
 # Search product
-sku_to_find = 'SKU123'
+skuToFind = 'SKU123'
 for sku in products.keys():
-    if sku == sku_to_find:
+    if sku == skuToFind:
         print('-' * 50)
         print(products[sku])
         print(f'The price of {products[sku]["name"]} is ${products[sku]["price"]:,.2f}')

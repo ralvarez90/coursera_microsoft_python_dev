@@ -47,7 +47,7 @@ heapq.heappush(data, 4)
 
 # Extrae el elemento más pequeño
 minimum = heapq.heappop(data)
-print(f'Mínimo extraido: {minimum}')
+print(f'Mínimo extraído: {minimum}')
 print(f'Estado del heap: {data}')
 
 # tareas
@@ -60,13 +60,13 @@ while tareas:
     print(f'Ejecutando tarea "{task}" con prioridad {priority}')
 
 # Obteniendo top-k
-some_data = [randint(1, 1_000) + 1 for _ in range(1_000)]
+someData = [randint(1, 1_000) + 1 for _ in range(1_000)]
 
 # get 3 largest
-largest_items = heapq.nlargest(3, some_data)
-smallest_items = heapq.nsmallest(3, some_data)
-print(largest_items)
-print(smallest_items)
+largestItems = heapq.nlargest(3, someData)
+smallestItems = heapq.nsmallest(3, someData)
+print(largestItems)
+print(smallestItems)
 
 # using counter
 queue = deque()
@@ -76,5 +76,5 @@ print(queue.popleft())
 
 # counter example
 text = 'This is a sample text with some repeat words words'
-word_counts = Counter(text.split())
-print(word_counts)
+wordCounts = Counter(text.split())
+print(wordCounts)

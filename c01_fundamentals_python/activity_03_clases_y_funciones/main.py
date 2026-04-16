@@ -8,38 +8,37 @@ number = Union[int, float]
 
 class TemperatureData:
 
-    # constructor
     def __init__(self, name: str, readings: list[number]):
         self.name = name
         self.readings = readings
 
-    def calc_range(self) -> number:
+    def calcRange(self) -> number:
         return max(self.readings) - min(self.readings)
 
-    def calculate_average_temp(self) -> float:
+    def calculateAverageTemp(self) -> float:
         return sum(self.readings) / len(self.readings)
 
-    def find_high_temp(self) -> number:
+    def findHighTemp(self) -> number:
         return max(self.readings)
 
-    def find_low_temp(self) -> number:
+    def findLowTemp(self) -> number:
         return min(self.readings)
 
 
 if __name__ == '__main__':
     # create sensor instance
-    sensor_name = 'East Forest Road Sensor'
-    sensor = TemperatureData(sensor_name, [75, 71, 68, 64, 88])
+    sensorName = 'East Forest Road Sensor'
+    sensor = TemperatureData(sensorName, [75, 71, 68, 64, 88])
 
     # get average temperature
-    average_temp = sensor.calculate_average_temp()
-    print(f'Average temperature of senson "{sensor_name}": {average_temp} °F')
+    averageTemp = sensor.calculateAverageTemp()
+    print(f'Average temperature of sensor "{sensorName}": {averageTemp} °F')
 
     # get highest and lowews temperatures
-    highest = sensor.find_high_temp()
-    lowest = sensor.find_low_temp()
-    print(f'Temp extremes for sensor "{sensor_name}": Highest: {highest}, Lowest: {lowest}')
+    highest = sensor.findHighTemp()
+    lowest = sensor.findLowTemp()
+    print(f'Temp extremes for sensor "{sensorName}": Highest: {highest}, Lowest: {lowest}')
 
     # calculate range
-    temp_range = sensor.calc_range()
-    print(f'Temp range for sensor "{sensor_name}": {temp_range} °F')
+    tempRange = sensor.calcRange()
+    print(f'Temp range for sensor "{sensorName}": {tempRange} °F')

@@ -16,7 +16,7 @@ from random import randint
 DICE_SHOTS: int = 10
 
 
-def count_vowels(text: str) -> int:
+def countVowels(text: str) -> int:
     if text in {'', None}:
         return 0
 
@@ -41,4 +41,4 @@ print(datetime.today())
 
 # Count vowels
 message = 'Hello World in Python3'
-print(f'Vowels in "{message}" are: {count_vowels(message)}"')
+print(f'Vowels in "{message}" are: {countVowels(message)}"')

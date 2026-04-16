@@ -6,8 +6,8 @@ Usamos la función print para enviar mensajes por consola.
 
 
 def main():
-    hello_msg: str = 'Hello World in Python'
-    print(hello_msg)
+    helloMsg: str = 'Hello World in Python'
+    print(helloMsg)
 
 
 if __name__ == '__main__':

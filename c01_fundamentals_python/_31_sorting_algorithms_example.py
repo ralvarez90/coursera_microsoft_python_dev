@@ -19,19 +19,19 @@ def simplesort(cards: list) -> list:
     """
 
     # Lista vacía de cartas ordenadas.
-    sorted_cards = []
+    sortedCards = []
 
     # Evalúa en true siempre que cartas no sea una lista vacía.
     while cards:
         # Obtiene carta más pequeña y la agrega a la lista de cartas ordenadas.
-        lowest_card = min(cards)
-        sorted_cards.append(lowest_card)
+        lowestCard = min(cards)
+        sortedCards.append(lowestCard)
 
         # Remueve la primera ocurrencia de la carta más pequeña.
-        cards.remove(lowest_card)
+        cards.remove(lowestCard)
 
     # Retorna lista de cartas ya ordenadas.
-    return sorted_cards
+    return sortedCards
 
 
 def quicksort(cards) -> list:
@@ -57,21 +57,21 @@ if __name__ == '__main__':
     TOTAL_NUMBERS = 1_000_000
 
     # Generamos lista de 1_000_000 elementos
-    random_integers = [random.randint(1, 1_000_001) for _ in range(TOTAL_NUMBERS)]
+    randomIntegers = [random.randint(1, 1_000_001) for _ in range(TOTAL_NUMBERS)]
     print(f'random_integers generated OK...\n')
 
     # Ordenamiento con algoritmo quicksort
-    sorted_integers = quicksort(random_integers)
-    print(f'Length of sorted_integers: {len(sorted_integers)}')
+    sortedIntegers = quicksort(randomIntegers)
+    print(f'Length of sorted_integers: {len(sortedIntegers)}')
     print('Sorted with quicksort is end...\n')
     exit()
 
     # Show numbers in a sorted list
     print('Sorted list:')
-    [print(f'- {i}') for i in sorted_integers]
+    [print(f'- {i}') for i in sortedIntegers]
 
     # Test de contingencia
-    if 1_000_000 in set(sorted_integers):
+    if 1_000_000 in set(sortedIntegers):
         print('1000000 exists in sorted integers')
 
     _ = input('\nPress any key to continue . . . ')

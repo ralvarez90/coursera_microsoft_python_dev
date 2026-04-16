@@ -6,7 +6,7 @@ puede lanzar o no cierto tipo de excepciones.
 """
 
 
-def get_city_population(populations: dict[str, int], city: str) -> int:
+def getCityPopulation(populations: dict[str, int], city: str) -> int:
     # Test type error for populations dictionary
     if not isinstance(populations, (dict, dict[str, int])):
         raise TypeError('populations argument in invalid')
@@ -26,12 +26,12 @@ def get_city_population(populations: dict[str, int], city: str) -> int:
 if __name__ == '__main__':
 
     # Data source dict
-    city_populations = {"New York": 8336817, "Los Angeles": 3979576, "Chicago": 2679044}
+    populations = {"New York": 8336817, "Los Angeles": 3979576, "Chicago": 2679044}
 
     # Input city name
-    city_name = input('Input city: ').strip()
+    city = input('Input city: ').strip()
     try:
-        city_population = get_city_population(city_populations, city_name)
-        print(f'City population of "{city_name}" is {city_population}')
+        population = getCityPopulation(populations, city)
+        print(f'City population of "{city}" is {population}')
     except KeyError as e:
         print(e)

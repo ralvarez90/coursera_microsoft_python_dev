@@ -43,12 +43,12 @@ x in list
 """
 
 # List with score test
-test_scores: list[int] = [55, 70, 78, 52, 68]
+testScores: list[int] = [55, 70, 78, 52, 68]
 
 # Calculation
-curve_amount = 10
-curved_grades = [score + curve_amount for score in test_scores]
+curveAmount = 10
+curvedGrades = [score + curveAmount for score in testScores]
 
 # Results
-print(f'Original scores: {test_scores}')
-print(f'Curved scores  : {curved_grades}')
+print(f'Original scores: {testScores}')
+print(f'Curved scores  : {curvedGrades}')

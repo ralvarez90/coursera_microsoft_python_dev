@@ -6,7 +6,7 @@ Generar diccionario con información de un estudiante.
 from pprint import pprint
 
 # Dictionary definition
-some_student = {
+someStudent = {
     'name': 'Ana García',
     'age': 16,
     'address': 'Calle Falsa 123',
@@ -17,4 +17,4 @@ some_student = {
 }
 
 # Show dict
-pprint(some_student)
+pprint(someStudent)

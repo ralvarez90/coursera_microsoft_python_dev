@@ -1,5 +1,5 @@
 """
-_34_exceptions.py
+EXCEPCIONES
 
 Mecanismo mediante el cual se puede controlar el flujo de una aplicación
 durante eventos inesperados en la ejecución de un programa.
@@ -63,7 +63,7 @@ UPPER_BOUND = 1000
 number = int | float
 
 
-def get_division(x: number, y: number) -> float:
+def getIntegerDivision(x: number, y: number) -> float:
     return x / y
 
 
@@ -73,26 +73,26 @@ if __name__ == '__main__':
     intents: int = 0
 
     # For example 2.
-    my_dict = {'a': 1, 'b': 2}
-    random_key: str = choice(list('abc'))
+    myDict = {'a': 1, 'b': 2}
+    randomKey: str = choice(list('abc'))
 
     # For example, 3.
     num1 = randint(LOWER_BOUND, UPPER_BOUND)
     num2 = randint(LOWER_BOUND, UPPER_BOUND)
     try:
         # Example 1.
-        result = get_division(num1, num2)
+        result = getIntegerDivision(num1, num2)
         print(f'{num1:3d} / {num2:3d} = {result:5.2f}')
         intents += 1
 
         # Example 2.
-        print(f'my_dict[{random_key}] -> {my_dict[random_key]}')
+        print(f'my_dict[{randomKey}] -> {myDict[randomKey]}')
     except ZeroDivisionError:
-        error_msg = f'Error al dividir x: {num1}/{num2}: Error en el intento {intents}.'
-        print(error_msg)
+        errMsg = f'Error al dividir x: {num1}/{num2}: Error en el intento {intents}.'
+        print(errMsg)
     except KeyError:
-        error_msg = f'Error al acceder al key {random_key}.'
-        print(error_msg)
+        errMsg = f'Error al acceder al key {randomKey}.'
+        print(errMsg)
     finally:
         print('Saliendo del programa. . . \n')
 

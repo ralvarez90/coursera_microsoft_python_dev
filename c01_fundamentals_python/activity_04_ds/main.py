@@ -2,16 +2,16 @@ import pandas as pd
 import pathlib
 
 # read csv fila
-file_name = 'inventory.csv'
-if not pathlib.Path(file_name).exists():
-    error_msg = f'File "{file_name}" don\'t exists.'
-    raise FileNotFoundError(error_msg)
+fileName = 'inventory.csv'
+if not pathlib.Path(fileName).exists():
+    errMsg = f'File "{fileName}" don\'t exists.'
+    raise FileNotFoundError(errMsg)
 
 # get inventory dataframe
-inventory_df = pd.read_csv(file_name)
+inventoryDf = pd.read_csv(fileName)
 
 # extract product names
-inventory = inventory_df['product_name'].tolist()
+inventory = inventoryDf['product_name'].tolist()
 
 # remove of list Cheesy Chompers
 if 'Cheesy Chompers' in set(inventory):
@@ -19,50 +19,54 @@ if 'Cheesy Chompers' in set(inventory):
 
 # show update inventory
 print('\nUpdated Inventory:')
-[print(f'- {item}') for item in inventory]
+for item in inventory:
+    print(f'- {item}')
 
 print('A new shipment of gourmet goodies has arrived!')
 
 # new shipment of goodies! (provided as a string)
-new_items_str = 'Squeaky Sausages, Tuna Tidbits, Chruncy Carrtos'
-new_items = new_items_str.split(sep=', ')
+newItemsStr = 'Squeaky Sausages, Tuna Tidbits, Chruncy Carrtos'
+newItems = newItemsStr.split(sep=', ')
 
 # Update the inventory list by adding 'new items'
-inventory.extend(new_items)
+inventory.extend(newItems)
 print('\nUpdated Inventory:')
-[print(f'- {item}') for item in inventory]
+for item in inventory:
+    print(f'- {item}')
 
 # create some products IDs as tuples
-product_id1 = ('Salmon Snacks', 'Small')
-product_id2 = ('Cheesy Chompers', 'Medium')
-product_id3 = ('Peanut Butter Biscuits', 'Large')
-print("Product IDs:")
-print(product_id1)
-print(product_id2)
-print(product_id3)
-print('\n' + '-'*60 + '\n')
+productId1 = ('Salmon Snacks', 'Small')
+productId2 = ('Cheesy Chompers', 'Medium')
+productId3 = ('Peanut Butter Biscuits', 'Large')
 
-# Load againg inventoru data from csv
-inventory_df = pd.read_csv(file_name)
+print("Product IDs:")
+print(productId1)
+print(productId2)
+print(productId3)
+print('\n' + '-' * 60 + '\n')
+
+# Load again inventory data from csv
+inventoryDf = pd.read_csv(fileName)
 
 # set the 'product_name' column as the index
-inventory_df.set_index(keys='product_name', inplace=True)
+inventoryDf.set_index(keys='product_name', inplace=True)
 
 # convert the dataframe directly to a dictionary
-inventory_dict = inventory_df['stock_level'].to_dict()
-print(inventory_dict)
+inventoryDict = inventoryDf['stock_level'].to_dict()
+print(inventoryDict)
 
 # Add "Puppy Snacks" to the inventoru
-inventory_dict["Puppy Snacks"] = 40
+inventoryDict["Puppy Snacks"] = 40
 
 # Update "Chessy Chompers" in the inventory and assign it the value of 20
-inventory_dict['Cheesy Chompers'] = 20
-print(inventory_dict)
+inventoryDict['Cheesy Chompers'] = 20
+print(inventoryDict)
 
 # Remove 'Peanut Butter Biscuits'
-if 'Peanut Butter Biscuits' in set(inventory_dict.keys()):
-    del inventory_dict['Peanut Butter Biscuits']
+if 'Peanut Butter Biscuits' in set(inventoryDict.keys()):
+    del inventoryDict['Peanut Butter Biscuits']
 
-# Show uptadetd invenroty
+# Show updated inventory
 print(f'\nUpdated Inventory:')
-[print(f'- ({k}, {v})') for k, v in inventory_dict.items()]
+for k, v in inventoryDict.items():
+    print(f'- {k}, {v}')

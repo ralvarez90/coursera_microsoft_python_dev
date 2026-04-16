@@ -35,7 +35,7 @@ def add(x: int | float, y: int | float) -> int | float:
     return x + y
 
 
-def test_add_no_parametrize():
+def testAddNoParametrize():
     assert add(1, 2) == 3
 
 
@@ -44,19 +44,19 @@ def test_add_no_parametrize():
     (0, 0, 0),
     (-1, 1, 0),
 ])
-def test_add(x, y, expected):
+def testAdd(x, y, expected):
     assert add(x, y) == expected
 
 
 # Define fixture
 @pytest.fixture
-def sample_data():
+def sampleData():
     data = [1, 2, 3, 4, 5]
     return data
 
 
 @pytest.fixture
-def enhanced_data():
+def enhancedData():
     print('Setting up enhanced data fixture. . . ')
 
     # Create a list of numbers
@@ -66,17 +66,17 @@ def enhanced_data():
     return [x * 2 for x in data]
 
 
-def test_sum(sample_data):
-    assert sum(sample_data) == 15
+def testSum(sampleData):
+    assert sum(sampleData) == 15
 
 
-def test_max(sample_data):
-    assert max(sample_data) == 5
+def testMax(sampleData):
+    assert max(sampleData) == 5
 
 
-def test_min(sample_data):
-    assert min(sample_data) == 1
+def testMin(sampleData):
+    assert min(sampleData) == 1
 
 
-def test_sum_enhanced(enhanced_data):
-    assert sum(enhanced_data) == 300
+def testSumEnhanced(enhancedData):
+    assert sum(enhancedData) == 300

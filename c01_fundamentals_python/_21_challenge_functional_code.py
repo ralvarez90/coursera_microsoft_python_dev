@@ -16,7 +16,7 @@ class TemperatureUnit(Enum):
     F = 2
 
 
-def convert_temperature(temperature: number, unit: TemperatureUnit):
+def convertTemperature(temperature: number, unit: TemperatureUnit):
     match unit:
         case TemperatureUnit.C:
             return temperature * 9 / 5 + 32
@@ -30,9 +30,9 @@ if __name__ == '__main__':
     temperatureF: number = 77
 
     # Get converted temperatures
-    converted_f = convert_temperature(temperatureC, TemperatureUnit.C)
-    converted_c = convert_temperature(temperatureF, TemperatureUnit.F)
+    convertedF = convertTemperature(temperatureC, TemperatureUnit.C)
+    convertedC = convertTemperature(temperatureF, TemperatureUnit.F)
 
     # Show results
-    print(f'{temperatureC:.2f}°C is equal to {converted_f:.2f}°F')
-    print(f'{temperatureF:.2f}°F is equal to {converted_c:.2f}°C')
+    print(f'{temperatureC:.2f}°C is equal to {convertedF:.2f}°F')
+    print(f'{temperatureF:.2f}°F is equal to {convertedC:.2f}°C')

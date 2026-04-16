@@ -30,10 +30,10 @@ import pytest
 
 
 @pytest.fixture
-def sample_list_data() -> list:
+def sampleListData() -> list:
     return [randint(1, 10) for _ in range(5)]
 
 
-def test_contains_five(sample_list_data: list):
+def testContainsFive(sampleListData: list):
     """Verifica si una lista de elementos contiene el 5."""
-    assert 5 in set(sample_list_data)
+    assert 5 in set(sampleListData)

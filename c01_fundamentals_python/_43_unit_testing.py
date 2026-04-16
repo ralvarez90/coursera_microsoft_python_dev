@@ -19,16 +19,16 @@ before they can cause widespread damage.
 import pytest
 
 
-def calculate_discount(price, discount):
+def calculateDiscount(price, discount):
     return price - (price * discount / 100)
 
 
 class TestDiscountCalculation:
 
-    def test_ten_percent_discount(self):
-        result = calculate_discount(price=100, discount=10)
+    def testTenPercentDiscount(self):
+        result = calculateDiscount(price=100, discount=10)
         assert result == 90
 
-    def test_invalid_input(self):
+    def testInvalidInput(self):
         with pytest.raises(TypeError):
-            calculate_discount("100", 10)
+            calculateDiscount("100", 10)

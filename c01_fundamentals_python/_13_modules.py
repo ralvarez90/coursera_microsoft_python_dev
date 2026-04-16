@@ -6,10 +6,10 @@ en otros scripts en python.
 """
 
 
-def show_cpu_cores():
+def showCPUCores():
     from os import cpu_count
     print(cpu_count())
 
 
 if __name__ == '__main__':
-    show_cpu_cores()
+    showCPUCores()

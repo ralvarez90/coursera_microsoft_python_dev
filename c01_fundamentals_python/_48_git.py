@@ -4,7 +4,7 @@ INTRODUCCIÓN A GIT
 La mecánica de Git: Snapshots, commits y ramas
 """
 
-git_core_concepts: str = """
+gitCoreConcepts: str = """
 GIT CORE CONCEPTS
 
 1. Repository (repositorio)
@@ -43,7 +43,7 @@ rama (donde trabajaste tú) se fusione (merge) con otra rama (normalmente la pri
 llamada main o master). Este no es un comando de git, es una funcionalidad de GitHub.
 """
 
-git_commands_manual: str = """
+gitCommandsManual: str = """
 GIT COMMANDS:
 
 git config --global user.name "Your Name"
@@ -92,7 +92,7 @@ git pull
 """
 
 # Show concepts
-print(git_core_concepts)
+print(gitCoreConcepts)
 
 # Show commands
-print(git_commands_manual)
+print(gitCommandsManual)

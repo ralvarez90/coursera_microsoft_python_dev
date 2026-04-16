@@ -6,7 +6,7 @@ pequeñas.
 """
 
 
-def linear_search(data: list, target):
+def linearSearch(data: list, target):
     """
     Retorna el índice de la primer coincidencia de target dentro de la lista
     data.
@@ -31,6 +31,6 @@ def linear_search(data: list, target):
 
 if __name__ == '__main__':
     # Example 1, using linear search
-    list_example = ['Hello', 'World', 'Good', 'Day', 'To', 'You']
-    search_1 = linear_search(list_example, 'Day')
-    print(f'Result of searching "Day": {search_1}')
+    listExample = ['Hello', 'World', 'Good', 'Day', 'To', 'You']
+    search1 = linearSearch(listExample, 'Day')
+    print(f'Result of searching "Day": {search1}')

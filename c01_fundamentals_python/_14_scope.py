@@ -15,14 +15,14 @@ un scope global o el de una función)
 COMPANY_NAME = 'Global Tech Solutions'
 
 
-def print_welcome_msg():
+def printWelcomeMsg():
     print(f'Welcome to {COMPANY_NAME.upper()}')
 
 
-def print_contact_info():
+def printContactInfo():
     print(f'Contact {COMPANY_NAME} at info@globalsolutions.com')
 
 
 if __name__ == '__main__':
-    print_welcome_msg()
-    print_contact_info()
+    printWelcomeMsg()
+    printContactInfo()

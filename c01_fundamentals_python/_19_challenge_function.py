@@ -5,7 +5,7 @@ Se crea función que calcula el diámetro a partir del radio de un círculo.
 """
 
 
-def calculate_diameter_circle(radius: float) -> float:
+def calculateDiameterCircle(radius: float) -> float:
     """Return a diameter of circle with argument radius.
 
     Args:
@@ -18,13 +18,13 @@ def calculate_diameter_circle(radius: float) -> float:
 
 
 def main():
-    radius_input: float = float(input('Enter a radius: '))
-    result_diameter = calculate_diameter_circle(radius_input)
-    if result_diameter == -1:
-        print(f'Invalid radius: {radius_input}')
+    radiusInput: float = float(input('Enter a radius: '))
+    resultDiameter = calculateDiameterCircle(radiusInput)
+    if resultDiameter == -1:
+        print(f'Invalid radius: {radiusInput}')
         return
 
-    print(f'Diameter or circle with radius {radius_input}: {result_diameter:.2f} Units')
+    print(f'Diameter or circle with radius {radiusInput}: {resultDiameter:.2f} Units')
 
 
 if __name__ == '__main__':

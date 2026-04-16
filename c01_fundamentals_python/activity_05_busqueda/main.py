@@ -2,12 +2,12 @@ import os
 import pandas as pd
 
 
-def get_title(book):
+def getTitle(book):
     return book['title']
 
 
-def sort_catalog_by_title(catalog):
-    catalog.sort(key=get_title)
+def sortCatalogByTitle(catalog):
+    catalog.sort(key=getTitle)
 
 
 # Bool file name
@@ -17,8 +17,8 @@ if not os.path.exists(filename):
     raise FileNotFoundError(f'File "{filename}" dont exists.')
 
 # Load the book catalog from the CSV
-book_catalog_df = pd.read_csv(filename)
+bookCatalogDf = pd.read_csv(filename)
 
 # Convert the DataFrame to a list to dictionaries
-book_catalog = book_catalog_df.to_dict(orient='records')
+book_catalog = bookCatalogDf.to_dict(orient='records')
 print(book_catalog)

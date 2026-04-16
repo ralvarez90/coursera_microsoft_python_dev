@@ -17,16 +17,16 @@ def divide(x, y):
         return None
 
 
-def calculate_discount(price: float, percentage: float) -> float:
+def calculateDiscount(price: float, percentage: float) -> float:
     if percentage < 0 or percentage > 100:
         raise ValueError('Discount percentage must be between 0 and 100')
-    discount_amount = price * (percentage / 100)
-    return price - discount_amount
+    discountAmount = price * (percentage / 100)
+    return price - discountAmount
 
 
 if __name__ == '__main__':
     try:
-        print(calculate_discount(100, 100))
+        print(calculateDiscount(100, 100))
     except ValueError as e:
         print(f'Error: {e}')
 

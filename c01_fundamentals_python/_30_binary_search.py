@@ -4,7 +4,7 @@ ALGORITMO BÚSQUEDA BINARIA
 from random import randint
 
 
-def binary_search(data: list, target):
+def binarySearch(data: list, target):
     """
     Performs a binary search to find the target element within a sorted list
 
@@ -51,9 +51,9 @@ def binary_search(data: list, target):
 # Run application.
 if __name__ == '__main__':
     # Create a list with random numbers and sort.
-    list_example = list(set([randint(1, 1_000_000) for _ in range(1_000_000)]))
-    list_example.sort()
+    listExample = list(set([randint(1, 1_000_000) for _ in range(1_000_000)]))
+    listExample.sort()
 
     # Use binary search to find the target element
-    print(f'Searching {list_example[-1]} in list_example...')
-    print(binary_search(data=list_example, target=list_example[-1]))
+    print(f'Searching {listExample[-1]} in list_example...')
+    print(binarySearch(data=listExample, target=listExample[-1]))

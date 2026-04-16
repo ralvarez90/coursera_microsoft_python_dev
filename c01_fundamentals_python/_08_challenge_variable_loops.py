@@ -11,19 +11,19 @@ number = int | float
 
 def main():
     # Temperaturas en grados Celsius.
-    celsius_temperatures: list[number] = [0, 10, 25, 32, 100]
+    celsiusTemperatures: list[number] = [0, 10, 25, 32, 100]
 
     # Crea lista vacía de resultados.
-    fahrenheit_temperatures: list[number] = []
+    fahrenheitTemperatures: list[number] = []
 
     # Itera sobre lista de Celsius y genera el equivalente en Fahrenheit,
-    for celsius in celsius_temperatures:
-        _aux_temp = (celsius * 9 / 5) + 32
-        fahrenheit_temperatures.append(_aux_temp)
+    for celsius in celsiusTemperatures:
+        _auxTemp = (celsius * 9 / 5) + 32
+        fahrenheitTemperatures.append(_auxTemp)
 
     # Show results
-    print(f'Celsius Temperatures    : {celsius_temperatures}')
-    print(f'Fahrenheit Temperatures : {fahrenheit_temperatures}')
+    print(f'Celsius Temperatures    : {celsiusTemperatures}')
+    print(f'Fahrenheit Temperatures : {fahrenheitTemperatures}')
 
 
 # Run application
