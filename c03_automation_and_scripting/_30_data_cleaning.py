@@ -75,7 +75,7 @@ propios puntos fuertes y casos de uso.
 import pandas as pd
 
 
-def drop_duplicates_example():
+def dropDuplicatesExample():
     data = {
         'name': ['Alice', 'Bob', 'Charlie', 'Alice'],
         'age': [25, 30, 28, 25],
@@ -94,7 +94,7 @@ def drop_duplicates_example():
     print(f'df_clean\n{df_clean}\n')
 
 
-def inconsistent_data_example():
+def inconsistentDataExample():
     data = {
         'date': ['2023-12-31', '12/30/2023', '2023-01-01', '01/02/2023'],
         'category': ['Electronics', 'electronics', 'ELECTRONICS', 'Electronic'],
@@ -112,16 +112,16 @@ def inconsistent_data_example():
     print(f'df\n{df}\n')
 
 
-def outliers_example():
+def outliersExample():
     pass
 
 
 if __name__ == '__main__':
-    drop_duplicates_example()
+    dropDuplicatesExample()
     print('-' * 64)
 
-    inconsistent_data_example()
+    inconsistentDataExample()
     print('-' * 64)
 
-    outliers_example()
+    outliersExample()
     print('-' * 64)

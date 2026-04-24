@@ -11,7 +11,7 @@ import time
 
 FILE_NAME = 'todo.txt'
 
-task_todo: tuple = (
+taskToDo: tuple = (
     'Read a book',
     'Practice python',
     'Develop unit test',
@@ -20,10 +20,10 @@ task_todo: tuple = (
 )
 
 with open(FILE_NAME, mode='w') as file:
-    for task in task_todo:
+    for task in taskToDo:
         file.write(f'{task}\n')
 
 print('Making task list in file todo.txt. . . ')
-time.sleep(5)
+time.sleep(10)
 
 os.remove(FILE_NAME)

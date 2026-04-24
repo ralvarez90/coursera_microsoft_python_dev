@@ -23,7 +23,7 @@ Las arañas son el corazón y el alma de cualquier proyecto de Scrapy. Las arañ
 la estructura del sitio web, analizando cuidadosamente el código HTML para identificar y extraer la
 información que usted busca.
 
-2. Articles (artículos, item
+2. Articles (artículos, item)
 Son elementos contenedores meticulosamente organizados, diseñados específicamente para contener
 los datos estructurados que sus arañas han recopilado diligentemente. Sirven como planos para la información
 que desea capturar, definiendo los campos específicos o categorías de datos que le interesan, junto con sus
@@ -56,7 +56,7 @@ RESUMEN DEL FLUJO DE OPERACIONES
 - El Pipeline procesa, limpia y guarda los Items.
 """
 
-scrapy_elements: str = """
+scrapyElements: str = """
 1. Spiders (Arañas)
 Son el corazón de Scrapy. Son clases personalizadas donde defines 
 qué sitios visitar y cómo extraer la información. En ellas defines 
@@ -104,5 +104,5 @@ sin tener que ejecutar toda la araña. Es la herramienta de depuración más imp
 durante el desarrollo.
 """
 
-print(scrapy_elements)
-input('\nPress any key to continue . . . ')
+print(scrapyElements)
+_ = input('\nPress any key to continue . . . ')

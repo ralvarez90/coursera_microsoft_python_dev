@@ -26,7 +26,7 @@ gracia cualquier peculiaridad del sistema operativo.
 """
 import glob
 
-python_files = glob.glob("*.py", recursive=True)
+pythonFiles = glob.glob("*.py", recursive=True)
 print(f'Python files:')
-for file in python_files:
+for file in pythonFiles:
     print(f'- {file}')

@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def extract_from_website(url: str) -> pd.DataFrame | None:
+def extractFromWebsite(url: str) -> pd.DataFrame | None:
     try:
         # Make a request to the URL
         response = requests.get(url)
@@ -20,25 +20,27 @@ def extract_from_website(url: str) -> pd.DataFrame | None:
 
         # Find table element
         table = soup.find('table')
-        pprint(table.string)
+        if table:
+            pprint(table.string)
+        else:
+            print('Data not found!')
 
     except Exception as e:
         print(f'Error fetching url: {url}')
         print(e)
-        return None
 
 
-def gather_data_from_resources():
+def gatherDataFromResources():
     pass
 
 
-def process_anf_format_data():
+def processAndFormatData():
     pass
 
 
-def generate_report():
+def generateReport():
     pass
 
 
 if __name__ == '__main__':
-    extract_from_website('https://webscraper.io/test-sites/tables/tables-without-thead')
+    extractFromWebsite('https://webscraper.io/test-sites/tables/tables-without-thead')

@@ -27,27 +27,27 @@ Este patrón coincide con URL (direcciones web).
 import re
 
 
-def extract_emails(text: str) -> list[str]:
+def extractEmails(text: str) -> list[str]:
     pattern: str = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
     return re.findall(pattern, text)
 
 
-def is_valid_phone_number(phone: str) -> bool:
+def isValidPhoneNumber(phone: str) -> bool:
     pattern: str = r'^(\d{3}) \d{3}-\d{4}$'
     return bool(re.match(pattern, phone))
 
 
-def is_valid_http_url(url: str) -> bool:
+def isValidHttpURL(url: str) -> bool:
     pattern: str = r'^https?://[^\s]+'
     return bool(re.match(pattern, url))
 
 
-def is_valid_email(email: str) -> bool:
+def isValidEmail(email: str) -> bool:
     pattern: str = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b'
     return bool(re.match(pattern, email))
 
 
-def run_tests_validate_email():
+def runTestsValidateEmail():
     emails_to_test = (
         'test@example.com',
         'invalid.email',
@@ -57,31 +57,32 @@ def run_tests_validate_email():
     )
 
     for email in emails_to_test:
-        print(f'Email: {email} - Valid: {is_valid_email(email)}')
+        print(f'Email: {email} - Valid: {isValidEmail(email)}')
 
 
 # Run application
 if __name__ == '__main__':
 
     # Example 1
-    emails_txt = 'Contactos: juan@mail.com, ana_89@empresa.org, test@.com'
-    emails = extract_emails(emails_txt)
+    emailsTxt = 'Contactos: juan@mail.com, ana_89@empresa.org, test@.com'
+    emails = extractEmails(emailsTxt)
     print(f'Emails: ')
-    [print(f'- {email}') for email in emails]
+    for email in emails:
+        print(f'- {email}')
 
     # Example 2
-    user_input_phone = input('Phone number: ')
-    if is_valid_phone_number(user_input_phone):
-        print(f'Phone number is valid: "{user_input_phone}"')
+    userInputPhone = input('Phone number: ')
+    if isValidPhoneNumber(userInputPhone):
+        print(f'Phone number is valid: "{userInputPhone}"')
     else:
-        print(f'Phone number is invalid: "{user_input_phone}"')
+        print(f'Phone number is invalid: "{userInputPhone}"')
 
     # Example 3
-    user_input_url = input('URL: ')
-    if is_valid_http_url(user_input_url):
-        print(f'URL is valid: "{user_input_url}"')
+    userInputURL = input('URL: ')
+    if isValidHttpURL(userInputURL):
+        print(f'URL is valid: "{userInputURL}"')
     else:
-        print(f'URL is invalid: "{user_input_url}"')
+        print(f'URL is invalid: "{userInputURL}"')
 
     # Example 4
-    run_tests_validate_email()
+    runTestsValidateEmail()

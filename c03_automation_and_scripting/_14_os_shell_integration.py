@@ -14,13 +14,13 @@ Popen (Process open)
 import subprocess
 
 # Use grep to find files lines containing "error" in a log file.
-grep_process = subprocess.Popen(['grep', 'error', 'logfile.txt'], stdout=subprocess.PIPE)
+grepProcess = subprocess.Popen(['grep', 'error', 'logfile.txt'], stdout=subprocess.PIPE)
 
 # Pass the output of grep to a python script for further analysis
-python_process = subprocess.Popen(['python3', 'analyze_errors.py'], stdin=grep_process.stdout)
+pythonProcess = subprocess.Popen(['python3', 'analyze_errors.py'], stdin=grepProcess.stdout)
 
 # Wait for the python script to finish
-python_process.wait()
+pythonProcess.wait()
 
 # Code in analyze_errors.py
 codeIn = """

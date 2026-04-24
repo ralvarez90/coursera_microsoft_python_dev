@@ -7,7 +7,7 @@ from typing import Any
 from bs4 import BeautifulSoup
 
 
-def get_product_info(html_txt: str) -> dict[str, str] | None:
+def getProductInfo(html_txt: str) -> dict[str, str] | None:
     soup = BeautifulSoup(html_txt, "html.parser")
     product = soup.find('div', class_='product')
 
@@ -18,7 +18,7 @@ def get_product_info(html_txt: str) -> dict[str, str] | None:
     } if product else None
 
 
-html_content: str = """
+htmlContent: str = """
 <div class="product">
   <h1>Awesome Headphones</h1>
   <p class="price">$99.99</p>
@@ -26,7 +26,10 @@ html_content: str = """
 </div>
 """
 
-result: dict[str, Any] | None = get_product_info(html_content)
-print(f'Name        : {result.get("name")}')
-print(f'Price       : {result.get("price")}')
-print(f'Description : {result.get("description")}')
+result: dict[str, Any] | None = getProductInfo(htmlContent)
+if result:
+    print(f'Name        : {result.get("name")}')
+    print(f'Price       : {result.get("price")}')
+    print(f'Description : {result.get("description")}')
+else:
+    print(f'No product found!')

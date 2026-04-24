@@ -42,10 +42,18 @@ pueden crear API sólidas y eficaces. Es como construir una casa con cerraduras
 fuertes y paredes robustas, pero también con ventanas que dejen entrar la luz
 y el aire.
 
-Recuerde que la seguridad es un proceso continuo. A medida que evolucione la tecnología, surgirán nuevas amenazas y vulnerabilidades. Si nos mantenemos informados y adaptamos nuestras estrategias de seguridad, podremos garantizar que nuestras API sigan siendo seguras y dignas de confianza durante años.
+Recuerde que la seguridad es un proceso continuo. A medida que evolucione la tecnología,
+surgirán nuevas amenazas y vulnerabilidades. Si nos mantenemos informados y adaptamos
+nuestras estrategias de seguridad, podremos garantizar que nuestras API sigan siendo
+seguras y dignas de confianza durante años.
 
 Conclusión: La piedra angular de la seguridad de las API
-En el mundo interconectado de las aplicaciones de software, la autenticación y la autorización de API no son sólo características opcionales, sino la base misma del diseño y la implementación de API seguras. Al comprender las funciones de las claves de API, OAuth y los tokens web, los desarrolladores se equipan con las herramientas necesarias para crear API sólidas y resistentes frente a posibles amenazas. Estos mecanismos son esenciales para salvaguardar los datos sensibles y garantizar que sólo las entidades autorizadas puedan acceder a los recursos de la API y utilizarlos.
-
-Recuerde que el panorama de las API está en constante evolución. Regularmente surgen nuevas amenazas y vulnerabilidades. Por lo tanto, es crucial que los desarrolladores se mantengan informados sobre las últimas prácticas recomendadas en materia de seguridad. Al adelantarse a los acontecimientos, los desarrolladores pueden adaptar proactivamente sus estrategias de seguridad de las API para mantener la integridad y fiabilidad de sus sistemas basados en API. En última instancia, este compromiso con el aprendizaje y la mejora continuos es lo que garantizará el éxito y la seguridad continuos del ecosistema API.
+En el mundo interconectado de las aplicaciones de software, la autenticación y la
+autorización de API no son solo características opcionales, sino la base misma del
+diseño y la implementación de API seguras. Al comprender las funciones de las
+claves de API, OAuth y los tokens web, los desarrolladores se equipan con las
+herramientas necesarias para crear API sólidas y resistentes frente a posibles
+amenazas. Estos mecanismos son esenciales para salvaguardar los datos sensibles y
+garantizar que solo las entidades autorizadas puedan acceder a los recursos de la API
+y utilizarlos.
 """

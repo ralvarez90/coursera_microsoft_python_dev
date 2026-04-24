@@ -63,7 +63,7 @@ import os
 import time
 
 
-def create_file_using_write_mode():
+def createFileUsingWriteMode():
     file = open('example.txt', mode='w')
     content = 'This is an example of a text file.'
     print('Writing content . . .')
@@ -72,7 +72,7 @@ def create_file_using_write_mode():
     file.close()
 
 
-def read_file_using_read_mode():
+def readFileUsingReadMode():
     with open('example.txt', mode='r') as file:
         print('Reading content...')
         time.sleep(1)
@@ -80,13 +80,13 @@ def read_file_using_read_mode():
         print(content)
 
 
-def delete_sample_files():
+def deleteSampleFiles():
     print('Deleting sample files . . .')
     time.sleep(1)
     os.remove('example.txt')
 
 
-def show_csv_example_code():
+def showCSVExampleCode():
     example = """
     import csv
     
@@ -105,12 +105,12 @@ def show_csv_example_code():
 
 def main():
     try:
-        create_file_using_write_mode()
-        read_file_using_read_mode()
-        delete_sample_files()
+        createFileUsingWriteMode()
+        readFileUsingReadMode()
+        deleteSampleFiles()
 
         print()
-        show_csv_example_code()
+        showCSVExampleCode()
     except Exception as e:
         print(e)
 

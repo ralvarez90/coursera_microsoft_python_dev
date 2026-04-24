@@ -3,10 +3,7 @@ EXTRACCIÓN DE DATOS DE UN SITIO WEB
 
 
 """
-from pprint import pprint
-
 import requests
-
 from bs4 import BeautifulSoup
 
 # Web target
@@ -24,17 +21,19 @@ else:
 
     # Search headings
     headings: list = soup.find_all('h1')
-    print('Headings:')
-    for heading in headings:
-        print(f'- {heading.text.strip()}')
+    if headings:
+        print('Headings:')
+        for heading in headings:
+            print(f'- {heading.text.strip()}')
 
     # Search links
     links: list = soup.find_all('a')
-    print('Links:')
-    for link in links:
-        href = link.get('href')
-        if href is not None:
-            print(f'- {href.strip()}')
+    if links:
+        print('Links:')
+        for link in links:
+            href = link.get('href')
+            if href is not None:
+                print(f'- {href.strip()}')
 
 # End message
 input('\nPress any key to continue . . . ')

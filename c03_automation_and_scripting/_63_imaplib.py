@@ -107,21 +107,19 @@ Por último, es indispensable realizar pruebas exhaustivas antes de desplegar lo
 en un entorno real. Cree un entorno de pruebas controlado en el que pueda simular varios escenarios y
 casos extremos. Esto ayuda a identificar y abordar cualquier problema o error potencial antes de que afecte
 a su flujo de trabajo de correo electrónico real. Recuerde, ¡un script bien probado es un script fiable!
-
-
 """
 import imaplib
 
 # Replace with your email provider
-imap_server = 'imap.your_email_provider.com'
-imap_port = 993
-email_address = 'your_email_example@example.com'
-email_password = 'your_password'
+imapServer = 'imap.your_email_provider.com'
+imapPort = 993
+emailAddress = 'your_email_example@example.com'
+emailPassword = 'your_password'
 
-ail: imaplib.IMAP4_SSL | None = None
+mail: imaplib.IMAP4_SSL | None = None
 try:
-    mail: imaplib.IMAP4_SSL = imaplib.IMAP4_SSL(imap_server, imap_port)
-    mail.login(email_address, email_password)
+    mail: imaplib.IMAP4_SSL = imaplib.IMAP4_SSL(imapServer, imapPort)
+    mail.login(emailAddress, emailPassword)
     mail.select('Inbox')
     status, messages = mail.search(None, 'ALL')
     if status == 'OK':

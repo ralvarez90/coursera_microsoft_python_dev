@@ -115,7 +115,7 @@ de codificación, utilizar nombres de variables claros y ser consciente de cómo
 import json
 
 # Dictionary
-user_data = {
+userData = {
     'name': 'Peter Parker',
     'age': 36,
     'is_premium': True,
@@ -123,5 +123,5 @@ user_data = {
 }
 
 # Convert to JSON string
-json_string = json.dumps(user_data, indent=4)
-print(json_string)
+jsonStr = json.dumps(userData, indent=4)
+print(jsonStr)

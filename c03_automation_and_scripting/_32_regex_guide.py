@@ -58,13 +58,13 @@ Entre las tareas más comunes se incluyen:
 import re
 
 
-def extract_emails(txt: str) -> list[str]:
+def extractEmails(txt: str) -> list[str]:
     pattern: str = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
     return re.findall(pattern, txt)
 
 
 text = 'Please contact me at john.doe@example.com or jane.doe@company.org for more information.'
-emails = extract_emails(text)
+emails = extractEmails(text)
 if emails:
     for email in emails:
         print(email)

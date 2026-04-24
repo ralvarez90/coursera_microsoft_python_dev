@@ -24,16 +24,16 @@ complementan a Pandas y NumPy, creando un ecosistema completo para la gestión y
 import numpy as np
 import pandas as pd
 
-# Create data dict
+# Init data dict
 data = {
     'price': [10, 150, np.nan, 200, np.nan, 180, 120],
 }
 
-# Create dataframe
+# Init dataframe
 df = pd.DataFrame(data)
 print(df)
 
-# Calculate median
+# Get median
 median = df['price'].median()
 df['price'].fillna(median, inplace=True)
 print(df)

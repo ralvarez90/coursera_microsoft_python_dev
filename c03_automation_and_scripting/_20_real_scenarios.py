@@ -12,20 +12,20 @@ Puedes utilizar la función os.access() de Python para verificar si tienes los p
 """
 
 # Example 1
-renaming_example: str = """
+renamingExample: str = """
 import os
 for i in range(1, 10):
     old_name = f'IMG_{i:03d}.jpg'
     new_name = f'vacation_photo_{i}.jpg'
     os.rename(old_name, new_name)
 """
-print(renaming_example)
+print(renamingExample)
 
 # Example 2
-searching_example: str = """
+searchingExample: str = """
 import glob
 pdf_files = glob.glob('*.pdf')
 for pdf in pdf_files:
     print(pdf)
 """
-print(searching_example)
+print(searchingExample)

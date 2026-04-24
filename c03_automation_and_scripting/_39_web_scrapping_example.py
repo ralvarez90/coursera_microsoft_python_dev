@@ -20,6 +20,10 @@ else:
     soup = BeautifulSoup(response.content, 'html.parser')
 
 # Get data information
+if not soup:
+    print(f'No product found!')
+    exit(1)
+
 menu_items = soup.find_all('div', class_='menu-item-label')
 for item in menu_items:
     print(item.text.strip())

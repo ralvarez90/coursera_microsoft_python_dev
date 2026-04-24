@@ -33,24 +33,23 @@ el correo electrónico. Es como si el cartero depositara la carta en el buzón y
 enviara al destinatario.
 
 Si intentas usar Gmail u Outlook, no funcionará con tu contraseña normal. Debes entrar a la
-configuración de tu cuenta (Google/Microsoft) y generar una "Contraseña de aplicación" específica para Python.
+configuración de tu cuenta (Google/Microsoft) y generar una "Contraseña de aplicación" específica
+para Python.
 
 No guardes la clave en el código. Usa variables de entorno o archivos .env para evitar que
 tu contraseña termine en GitHub por accidente.
 """
 import smtplib
-
 from email.mime.text import MIMEText
 
 
 def example_simple_email():
-    smtp_server: str = 'smtp.gmail.com'
-    smtp_port: int = 587
+    smtpServer: str = 'smtp.gmail.com'
+    smtpPort: int = 587
+    senderEmail: str = 'rodrigo.alvare.herrera@gmail.com'
+    senderPassword: str = 'Les900310@123'
 
-    sender_email: str = 'rodrigo.alvare.herrera@gmail.com'
-    sender_password: str = 'Les900310@123'
-
-    receiver_email: str = 'rodrigo.alvarez.100390@gmail.com'
+    receiverEmail: str = 'rodrigo.alvarez.100390@gmail.com'
     message: str = f'''\
     Subject: Hello From Python
 
@@ -58,18 +57,22 @@ def example_simple_email():
 
     server: smtplib.SMTP | None = None
     try:
-        smtplib.SMTP(smtp_server, smtp_port)
+        server = smtplib.SMTP(smtpServer, smtpPort)
+        if not server:
+            raise Exception('No se puede enviar el servidor SMTP.')
         server.starttls()
-        server.login(sender_email, sender_password)
-        server.sendmail(sender_email, receiver_email, message)
+        server.login(senderEmail, senderPassword)
+        server.sendmail(senderEmail, receiverEmail, message)
         print('Email sent successfully!')
+        server.quit()
     except Exception as e:
         print(e)
     finally:
-        server.quit()
+        if server:
+            server.quit()
 
 
-def example_complex_email():
+def exampleComplexEmail():
     # 1. Create the MIMEText object with the email body
     message = MIMEText('This is a email body.')
 

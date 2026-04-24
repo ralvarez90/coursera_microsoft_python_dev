@@ -29,7 +29,7 @@ la compilación de CSS o la ejecución de scripts de compilación suelen automat
 de comandos de Python y shell, lo que agiliza el flujo de trabajo de desarrollo.
 """
 
-example_code: str = """
+exampleCode: str = """
 import os
 import subprocess
 for filename in os.listdir('data_directory'):
@@ -37,9 +37,9 @@ for filename in os.listdir('data_directory'):
         # Convert CSV files to Excel using a shell command
         subprocess.call(['libreoffice', '--convert-to', 'xls', filename])
 """
-print(example_code, end='\n\n')
+print(exampleCode, end='\n\n')
 
-example_code_with_error: str = """
+exampleCodeWithError: str = """
 import subprocess
 
 try:
@@ -47,7 +47,7 @@ try:
 except subprocess.CalledProcessError as e:
     print(f"Error deleting file: {e}")
 """
-print(example_code_with_error, end='\n\n')
+print(exampleCodeWithError, end='\n\n')
 
 # End message
 _ = input('\nPress ENTER to continue . . . ')

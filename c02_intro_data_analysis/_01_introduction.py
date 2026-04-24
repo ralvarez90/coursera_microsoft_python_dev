@@ -1,9 +1,8 @@
 """
-_01_introduction.py
+INTRODUCCIÓN AL ANALISIS DE DATOS
 """
-from utils import UtilConsole
 
-lesson_content: str = """
+lessonContent: str = """
 INTRODUCCIÓN AL ANÁLISIS DE DATOS
 
 En esencia el análisis de datos es el puente entre los datos sin procesar
@@ -14,4 +13,4 @@ El análisis de datos nos permite tomar decisiones basadas en evidencia y no
 en intuición.
 """
 
-UtilConsole.show_lesson(lesson_content)
+print(lessonContent)

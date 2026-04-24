@@ -167,7 +167,7 @@ import jwt
 import requests
 
 
-def example_01_api_call():
+def example01APICall():
     API_KEY: str = '240cf62c8846bd8a948db87e9c178de3'
     url = 'https://api.weatherapi.com/v1/current.json'
     params = {'key': API_KEY, 'q': 'London'}
@@ -182,9 +182,9 @@ def example_01_api_call():
         print(err)
 
 
-def example_02_create_jwt():
+def example02CreateJWT():
     # This is only for
-    secret_key = 'This_is_a_secret_key123@123*1234523453$%3'
+    secretKey = 'This_is_a_secret_key123@123*1234523453$%3'
 
     # Exp -> time expiration
     payload = {
@@ -193,13 +193,20 @@ def example_02_create_jwt():
     }
 
     # Generate token
-    token = jwt.encode(payload, secret_key, algorithm='HS256')
+    token = jwt.encode(payload, secretKey, algorithm='HS256')
     print(token)
 
 
-if __name__ == '__main__':
-    example_01_api_call() or print()
-    example_02_create_jwt() or print()
+def main():
+    example01APICall()
+    print()
 
+    example02CreateJWT()
+    print()
+
+
+if __name__ == '__main__':
+    main()
+    
     # End application
     _ = input('\nPress ENTER to quit . . .  ')

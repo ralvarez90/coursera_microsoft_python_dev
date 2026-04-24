@@ -15,6 +15,7 @@ más clara del ROI potencial, ayudándole a tomar una decisión informada sobre 
 con la automatización.
 
 4. ¿Hasta qué punto es propenso a errores el proceso manual?
+
 5. ¿La tarea requiere interacción humana o toma de decisiones?
 
 6. ¿La tarea está estandarizada y es predecible?
@@ -22,8 +23,10 @@ Las tareas con pasos claros y bien definidos y pocas excepciones son candidatas 
 la automatización.
 
 7. ¿Se dispone de los datos y recursos necesarios?
+
 8. ¿Cuáles son los posibles riesgos e inconvenientes?
 
 9. ¿Cómo afectará la automatización a los empleados?
+
 10. ¿Está la tecnología disponible y suficientemente madura?
 """

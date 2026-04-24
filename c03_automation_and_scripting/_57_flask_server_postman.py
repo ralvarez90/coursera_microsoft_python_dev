@@ -15,12 +15,12 @@ end point de la API, los headers que incluyen información adicional enviada con
 a menudo incluye el api key, y el body que son los datos que envía el solicitante.
 """
 
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify, Response
 
 # Create flask app instance
 app = Flask(__name__)
 
-posts_db = {
+postsDB = {
     1: {"titulo": "Mi primer post", "contenido": "Hola mundo", "autor": "Admin"},
     2: {"titulo": "Flask es genial", "contenido": "Aprendiendo rutas", "autor": "User1"}
 }
@@ -28,8 +28,7 @@ posts_db = {
 
 @app.route("/")
 def index():
-
-    html_content = '''
+    htmlContent = '''
     <!DOCTYPE html>
     <html lang="es-MX">
 
@@ -45,17 +44,17 @@ def index():
 
     </html>
     '''
-    return html_content
+    return htmlContent
 
 
 @app.route("/posts")
-def get_posts():
-    return jsonify(posts_db), 200
+def getPosts() -> tuple[Response, int]:
+    return jsonify(postsDB), 200
 
 
 @app.route("/posts/<int:post_id>")
-def get_post(post_id: int):
-    return jsonify(posts_db.get(post_id)), 200
+def get_post(post_id: int) -> tuple[Response, int]:
+    return jsonify(postsDB.get(post_id)), 200
 
 
 # Run application

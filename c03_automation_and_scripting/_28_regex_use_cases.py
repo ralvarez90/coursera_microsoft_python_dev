@@ -25,6 +25,6 @@ marketing, el desarrollo de productos y la gestión de la reputación de la marc
 import re
 
 
-def validate_email(email: str) -> bool:
+def validateEmail(email: str) -> bool:
     pattern: str = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b'
     return bool(re.match(pattern, email))

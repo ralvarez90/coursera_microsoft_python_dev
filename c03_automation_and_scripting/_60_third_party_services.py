@@ -118,7 +118,7 @@ innovadoras que agilicen sus flujos de trabajo, aumenten su productividad y mejo
 límite es su imaginación.
 """
 
-code_example: str = """
+codeExample: str = """
 import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
@@ -153,4 +153,4 @@ if __name__ == "__main__":
 
 """
 
-print(code_example)
+print(codeExample)

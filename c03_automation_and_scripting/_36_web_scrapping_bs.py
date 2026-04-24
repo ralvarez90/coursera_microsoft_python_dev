@@ -69,8 +69,8 @@ y simular las interacciones del usuario.
 from bs4 import BeautifulSoup, Tag
 
 
-def example_bs_01():
-    html_content: str = """
+def exampleBS01():
+    htmlContent: str = """
     <!DOCTYPE html>
     <html lang="es">
 
@@ -132,7 +132,7 @@ def example_bs_01():
     """
 
     # Create a hierarchical tree
-    soup = BeautifulSoup(html_content, 'html.parser')
+    soup = BeautifulSoup(htmlContent, 'html.parser')
 
     # Find the document title
     title: str = soup.title.text
@@ -152,7 +152,7 @@ def example_bs_01():
     print(f'special_paragraph: {special_paragraph}')
 
 
-def example_bs_02():
+def exampleBS02():
     # Content
     html_content: str = """
     <html>
@@ -187,8 +187,8 @@ def example_bs_02():
 
 
 if __name__ == '__main__':
-    example_bs_01()
+    exampleBS01()
     print('-' * 64)
 
-    example_bs_02()
+    exampleBS02()
     print('-' * 64)

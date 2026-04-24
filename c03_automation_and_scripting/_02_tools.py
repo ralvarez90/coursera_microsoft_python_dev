@@ -30,7 +30,7 @@ Herramienta para analizar páginas web.
 Librería para realizar peticiones http.
 
 6. Schedule
-Permite programar tareas sencillas
+Permite programar tareas sencillas.
 
 7. PyAutoGui
 Permite controlar el ratón y el teclado mediante programación.

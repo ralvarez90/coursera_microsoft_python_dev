@@ -28,7 +28,7 @@ rígida que se usa para sistemas que tienen niveles de seguridad altos.
 solicitar solo la información específica que necesitas.
 """
 
-lesson_content: str = """
+lesson: str = """
 1. REST (Representational State Transfer)
 Es el estándar más popular en la web actual. No es un protocolo estricto, sino un estilo de 
 arquitectura que utiliza los métodos nativos de HTTP. 
@@ -58,5 +58,5 @@ Filosofía: "Pídeme solo lo que necesites, ni más ni menos".
 Ventajas: Evita el over-fetching (traer datos de más) y el under-fetching (tener que hacer 
 5 llamadas a la API para mostrar una sola pantalla).
 """
-print(lesson_content)
+print(lesson)
 _ = input('\nPress ENTER to quit . . . ')
